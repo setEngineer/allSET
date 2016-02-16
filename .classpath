@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-api-2.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-core-2.2.jar"/>
+	<classpathentry kind="lib" path="lib/spring-context-3.2.9.RELEASE.jar" sourcepath="C:/Users/raml/Downloads/spring-framework-3.2.9.RELEASE-dist/spring-framework-3.2.9.RELEASE/libs/spring-context-3.2.9.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="lib/spring-core-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/testng-6.8.jar"/>
+	<classpathentry kind="lib" path="lib/spring-beans-3.2.9.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

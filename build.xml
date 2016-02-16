@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="allSET" default="dist" basedir=".">
+
+  <!-- set global properties for this bin -->
+  <property name="src" location="src"/>
+  <property name="test" location="test"/>
+  <property name="resources" location="resources"/>
+  <property name="bin" location="bin"/>
+  <property name="lib" location="lib"/>
+  <property name="dist"  location="dist"/>
+  <property name="test-output"  location="test-output"/>
+	
+  <path id="compile.classpath">
+    <pathelement location="${lib}/"/>
+    <pathelement path="${lib}\spring-beans-3.2.9.RELEASE.jar;${lib}\spring-context-3.2.9.RELEASE.jar;${lib}\spring-core-3.2.9.RELEASE.jar;${lib}\log4j-core-2.2.jar;${lib}\log4j-api-2.2.jar;${lib}\log4j-1.2.17.jar" />
+  </path>
+
+  <path id="test.classpath">
+  	<pathelement path="${lib}\spring-beans-3.2.9.RELEASE.jar;${lib}\spring-context-3.2.9.RELEASE.jar;${lib}\spring-core-3.2.9.RELEASE.jar;${lib}\log4j-core-2.2.jar;${lib}\log4j-api-2.2.jar;${lib}\log4j-1.2.17.jar" />
+    <pathelement path="${lib}\testng-6.8.jar" />
+  </path>	
+	
+  <target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the bin directory structure used by compile -->
+    <mkdir dir="${bin}"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${bin} -->
+    <javac srcdir="${src}" destdir="${bin}" debug="true" classpathref="compile.classpath">     	
+    </javac>	
+    	
+  </target>
+
+  <target name="test-compile" depends="compile"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${bin} -->
+    <javac srcdir="${test}" destdir="${bin}" debug="true" classpathref="test.classpath">     	
+    </javac>	
+    	
+  </target>
+	
+  <taskdef name="testng" classname="org.testng.TestNGAntTask">
+	<classpath location="${lib}/testng-6.8.jar" />
+  </taskdef>
+		
+  <target name="testng" depends="test-compile">
+
+	<!-- Assume test.path contains the project library dependencies -->
+	<testng classpathref="test.classpath"
+		outputDir="${dist}\testng" 
+		haltOnFailure="true">
+			
+		<!-- <jvmarg value="-DuploadDir=c:\workspace\upload2"/> -->
+		
+		<!-- Extra project classpath, which is not included in above "test.path" -->
+		<!-- C:\eclipse-workspace\tier1app-reorg\webroot\WEB-INF\classes Tell Ant where is the project and test classes -->
+		<classpath location="${bin}" />
+			
+		<!-- Tell Ant what test classes need to run -->
+		<classfileset dir="${bin}" includes="**/*Test*.class" />
+			
+	</testng>
+
+  </target>	
+
+  <target name="dist" 
+  		  depends="compile"
+          description="generate the gceasy distribution" >
+  	
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+  	
+    <copy todir="${bin}">
+      <fileset dir="${resources}" />
+    </copy>
+  	
+  	<delete file="${dist}/platformx.jar" />
+  	
+    <jar jarfile="${dist}/allSET-1.0.jar" >
+
+    	<fileset dir="${bin}"/>   	
+    </jar>
+
+  </target>	
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${bin} and ${dist} directory trees -->
+    <delete dir="${bin}"/>
+    <delete dir="${dist}"/>
+  	<delete dir="${test-output}"/>
+  </target>
+</project>
