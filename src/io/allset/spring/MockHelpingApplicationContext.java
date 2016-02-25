@@ -50,7 +50,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 *
 * @author Ram Lakshmanan
 */
-public class CleverApplicationContext extends ClassPathXmlApplicationContext {
+public class MockHelpingApplicationContext extends ClassPathXmlApplicationContext {
 
 	/**
 	 * Create a new CleverApplicationContext for bean-style configuration.
@@ -58,7 +58,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @see #setConfigLocations
 	 * @see #afterPropertiesSet()
 	 */
-	public CleverApplicationContext() {
+	public MockHelpingApplicationContext() {
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @see #setConfigLocations
 	 * @see #afterPropertiesSet()
 	 */
-	public CleverApplicationContext(ApplicationContext parent) {
+	public MockHelpingApplicationContext(ApplicationContext parent) {
 		super(parent);
 	}
 
@@ -78,7 +78,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @param configLocation resource location
 	 * @throws BeansException if context creation failed
 	 */
-	public CleverApplicationContext(String configLocation) throws BeansException {
+	public MockHelpingApplicationContext(String configLocation) throws BeansException {
 		super(configLocation);
 	}
 
@@ -88,7 +88,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @param configLocations array of resource locations
 	 * @throws BeansException if context creation failed
 	 */
-	public CleverApplicationContext(String... configLocations) throws BeansException {
+	public MockHelpingApplicationContext(String... configLocations) throws BeansException {
 		super(configLocations);
 	}
 
@@ -100,7 +100,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @param parent the parent context
 	 * @throws BeansException if context creation failed
 	 */
-	public CleverApplicationContext(String[] configLocations, ApplicationContext parent) throws BeansException {
+	public MockHelpingApplicationContext(String[] configLocations, ApplicationContext parent) throws BeansException {
 		super(configLocations, parent);
 	}
 
@@ -114,7 +114,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @throws BeansException if context creation failed
 	 * @see #refresh()
 	 */
-	public CleverApplicationContext(String[] configLocations, boolean refresh) throws BeansException {
+	public MockHelpingApplicationContext(String[] configLocations, boolean refresh) throws BeansException {
 		super(configLocations, refresh);
 	}
 
@@ -129,7 +129,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @throws BeansException if context creation failed
 	 * @see #refresh()
 	 */
-	public CleverApplicationContext(String[] configLocations, boolean refresh, ApplicationContext parent)
+	public MockHelpingApplicationContext(String[] configLocations, boolean refresh, ApplicationContext parent)
 			throws BeansException {
 
 		super(configLocations, refresh, parent);
@@ -149,7 +149,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @see org.springframework.context.support.GenericApplicationContext
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
-	public CleverApplicationContext(String path, Class clazz) throws BeansException {
+	public MockHelpingApplicationContext(String path, Class clazz) throws BeansException {
 		super(path, clazz);
 	}
 
@@ -163,7 +163,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @see org.springframework.context.support.GenericApplicationContext
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
-	public CleverApplicationContext(String[] paths, Class clazz) throws BeansException {
+	public MockHelpingApplicationContext(String[] paths, Class clazz) throws BeansException {
 		super(paths, clazz);
 	}
 
@@ -179,7 +179,7 @@ public class CleverApplicationContext extends ClassPathXmlApplicationContext {
 	 * @see org.springframework.context.support.GenericApplicationContext
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
-	public CleverApplicationContext(String[] paths, Class clazz, ApplicationContext parent)
+	public MockHelpingApplicationContext(String[] paths, Class clazz, ApplicationContext parent)
 			throws BeansException {
 
 		super(paths, clazz);

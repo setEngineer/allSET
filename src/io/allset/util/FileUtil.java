@@ -1,6 +1,7 @@
 package io.allset.util;
 
 import java.io.File;
+import java.nio.charset.Charset;
 import java.nio.charset.MalformedInputException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -186,6 +187,17 @@ public class FileUtil {
 			s_logger.error("Failed to write to file " + ExceptionUtil.getDetails(e));
 		}
 	}
+	
+	public static void writeReport(String filePath, List<String> datas) {
+		
+		try {
+
+			Files.write(Paths.get(filePath), datas, Charset.forName("UTF-8"));
+			//Files.write(Paths.get(filePath), reportString.getBytes());
+		} catch (Exception e) {
+			s_logger.error("Failed to write to file " + ExceptionUtil.getDetails(e));
+		}
+	}	
 
 	public static String archiveFile(String filePath) {
 
@@ -210,4 +222,16 @@ public class FileUtil {
 
 		return null;
 	}
+	
+	public static void writeToDisk(String filePath, String reportString) {
+		
+		try {
+
+			Files.write(Paths.get(filePath), reportString.getBytes());
+		} catch (Exception e) {
+			s_logger.error("Failed to write to file " + ExceptionUtil.getDetails(e));
+		}
+	}
+	
+	
 }
