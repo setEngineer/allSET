@@ -1,8 +1,8 @@
-package io.allset.datazen;
+package io.allset.testzen;
 
-import io.allset.datazen.entity.Field;
-import io.allset.datazen.reader.SimpleExcelReader;
-import io.allset.datazen.util.StringPrinter;
+import io.allset.testzen.entity.Field;
+import io.allset.testzen.reader.SimpleExcelReader;
+import io.allset.testzen.util.StringPrinter;
 
 import java.util.List;
 
@@ -13,9 +13,9 @@ import org.apache.logging.log4j.Logger;
  * 
  * @author Ram Lakshmanan
  */
-public class DataZen {
+public class TestZen {
 
-	private static final Logger s_logger = LogManager.getLogger(DataZen.class);	
+	private static final Logger s_logger = LogManager.getLogger(TestZen.class);	
 	
 	public static void main(String args[]) throws Exception {
 		

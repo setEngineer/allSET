@@ -50,7 +50,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 *
 * @author Ram Lakshmanan
 */
-public class MockHelpingApplicationContext extends ClassPathXmlApplicationContext {
+public class MockFriendlyApplicationContext extends ClassPathXmlApplicationContext {
 
 	/**
 	 * Create a new CleverApplicationContext for bean-style configuration.
@@ -58,7 +58,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @see #setConfigLocations
 	 * @see #afterPropertiesSet()
 	 */
-	public MockHelpingApplicationContext() {
+	public MockFriendlyApplicationContext() {
 	}
 
 	/**
@@ -68,7 +68,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @see #setConfigLocations
 	 * @see #afterPropertiesSet()
 	 */
-	public MockHelpingApplicationContext(ApplicationContext parent) {
+	public MockFriendlyApplicationContext(ApplicationContext parent) {
 		super(parent);
 	}
 
@@ -78,7 +78,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @param configLocation resource location
 	 * @throws BeansException if context creation failed
 	 */
-	public MockHelpingApplicationContext(String configLocation) throws BeansException {
+	public MockFriendlyApplicationContext(String configLocation) throws BeansException {
 		super(configLocation);
 	}
 
@@ -88,7 +88,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @param configLocations array of resource locations
 	 * @throws BeansException if context creation failed
 	 */
-	public MockHelpingApplicationContext(String... configLocations) throws BeansException {
+	public MockFriendlyApplicationContext(String... configLocations) throws BeansException {
 		super(configLocations);
 	}
 
@@ -100,7 +100,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @param parent the parent context
 	 * @throws BeansException if context creation failed
 	 */
-	public MockHelpingApplicationContext(String[] configLocations, ApplicationContext parent) throws BeansException {
+	public MockFriendlyApplicationContext(String[] configLocations, ApplicationContext parent) throws BeansException {
 		super(configLocations, parent);
 	}
 
@@ -114,7 +114,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @throws BeansException if context creation failed
 	 * @see #refresh()
 	 */
-	public MockHelpingApplicationContext(String[] configLocations, boolean refresh) throws BeansException {
+	public MockFriendlyApplicationContext(String[] configLocations, boolean refresh) throws BeansException {
 		super(configLocations, refresh);
 	}
 
@@ -129,7 +129,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @throws BeansException if context creation failed
 	 * @see #refresh()
 	 */
-	public MockHelpingApplicationContext(String[] configLocations, boolean refresh, ApplicationContext parent)
+	public MockFriendlyApplicationContext(String[] configLocations, boolean refresh, ApplicationContext parent)
 			throws BeansException {
 
 		super(configLocations, refresh, parent);
@@ -149,7 +149,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @see org.springframework.context.support.GenericApplicationContext
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
-	public MockHelpingApplicationContext(String path, Class clazz) throws BeansException {
+	public MockFriendlyApplicationContext(String path, Class clazz) throws BeansException {
 		super(path, clazz);
 	}
 
@@ -163,7 +163,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @see org.springframework.context.support.GenericApplicationContext
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
-	public MockHelpingApplicationContext(String[] paths, Class clazz) throws BeansException {
+	public MockFriendlyApplicationContext(String[] paths, Class clazz) throws BeansException {
 		super(paths, clazz);
 	}
 
@@ -179,7 +179,7 @@ public class MockHelpingApplicationContext extends ClassPathXmlApplicationContex
 	 * @see org.springframework.context.support.GenericApplicationContext
 	 * @see org.springframework.beans.factory.xml.XmlBeanDefinitionReader
 	 */
-	public MockHelpingApplicationContext(String[] paths, Class clazz, ApplicationContext parent)
+	public MockFriendlyApplicationContext(String[] paths, Class clazz, ApplicationContext parent)
 			throws BeansException {
 
 		super(paths, clazz);

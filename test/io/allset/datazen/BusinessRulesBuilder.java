@@ -1,7 +1,7 @@
 package io.allset.datazen;
 
-import io.allset.datazen.entity.Field;
-import io.allset.datazen.reader.SimpleExcelReader;
+import io.allset.testzen.entity.Field;
+import io.allset.testzen.reader.SimpleExcelReader;
 
 import java.util.ArrayList;
 import java.util.List;

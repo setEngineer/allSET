@@ -1,9 +1,9 @@
-package io.allset.datazen.reader;
+package io.allset.testzen.reader;
 
-import io.allset.datazen.entity.Field;
-import io.allset.datazen.type.ResultType;
-import io.allset.datazen.type.Type;
-import io.allset.datazen.type.TypeFactory;
+import io.allset.testzen.entity.Field;
+import io.allset.testzen.type.ResultType;
+import io.allset.testzen.type.Type;
+import io.allset.testzen.type.TypeFactory;
 import io.allset.util.FileUtil;
 import io.allset.util.StringUtil;
 

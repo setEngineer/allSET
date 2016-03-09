@@ -1,6 +1,6 @@
-package io.allset.datazen.util;
+package io.allset.testzen.util;
 
-import io.allset.datazen.entity.Field;
+import io.allset.testzen.entity.Field;
 
 import java.util.List;
 

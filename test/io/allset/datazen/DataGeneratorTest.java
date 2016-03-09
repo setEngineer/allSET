@@ -1,9 +1,9 @@
 package io.allset.datazen;
 
-import io.allset.datazen.entity.Field;
-import io.allset.datazen.type.EnumerationType;
-import io.allset.datazen.type.ResultType;
-import io.allset.datazen.util.StringPrinter;
+import io.allset.testzen.entity.Field;
+import io.allset.testzen.type.EnumerationType;
+import io.allset.testzen.type.ResultType;
+import io.allset.testzen.util.StringPrinter;
 
 import java.util.List;
 

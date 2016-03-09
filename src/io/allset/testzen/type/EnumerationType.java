@@ -1,4 +1,4 @@
-package io.allset.datazen.type;
+package io.allset.testzen.type;
 
 import io.allset.util.StringUtil;
 

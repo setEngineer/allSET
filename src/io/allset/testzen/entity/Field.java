@@ -1,6 +1,6 @@
-package io.allset.datazen.entity;
+package io.allset.testzen.entity;
 
-import io.allset.datazen.type.Type;
+import io.allset.testzen.type.Type;
 
 /**
  * 

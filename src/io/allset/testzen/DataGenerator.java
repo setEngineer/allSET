@@ -1,8 +1,8 @@
-package io.allset.datazen;
+package io.allset.testzen;
 
-import io.allset.datazen.entity.Field;
-import io.allset.datazen.type.ResultType;
-import io.allset.datazen.util.StringPrinter;
+import io.allset.testzen.entity.Field;
+import io.allset.testzen.type.ResultType;
+import io.allset.testzen.util.StringPrinter;
 import io.allset.util.ContinuousFileWriter;
 import io.allset.util.StringUtil;
 
